@@ -78,6 +78,7 @@
     page.should have_no_xpath('//a')
  
 =XPath and CSS=
+
     within(:css, 'ul li') { ... }
     find(:css, 'ul li').text
     locate(:css, 'input#name').value #For input, use .value. Other fields, use .text
