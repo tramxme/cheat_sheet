@@ -1,8 +1,10 @@
 =Navigating=
+
     visit('/projects')
     visit(post_comments_path(post))
  
 =Clicking links and buttons=
+
     click_link('id-of-link')
     click_link('Link Text')
     click_button('Save')
@@ -14,6 +16,7 @@
     find(xpath/css).click
  
 =Interacting with forms=
+
     fill_in('First Name', :with => 'John')
     fill_in('Password', :with => 'Seekrit')
     fill_in('Description', :with => 'Really Long Text…')
@@ -24,6 +27,7 @@
     select('Option', :from => 'Select Box')
  
 =scoping=
+
     within("//li[@id='employee']") do
       fill_in 'Name', :with => 'Jimmy'
     end
@@ -38,6 +42,7 @@
     end
      
 =Querying=
+
     page.has_xpath?('//table/tr')
     page.has_css?('table tr.foo')
     page.has_content?('foo')
@@ -53,16 +58,20 @@
     all('a').each { |a| a[:href] }
  
 =Scripting=
+
     result = page.evaluate_script('4 + 4');
     page.execute_script('1+1')
  
 =Debugging=
+
     save_and_open_page
+    screenshot_and_open_image #(install gem Capybara_screenshot)
     page.driver.render('random_name.png', full: true)
-    pry (install gem pry)
-    debugger (install gem debugger)
+    pry #(install gem pry)
+    debugger #(install gem debugger)
  
 =Asynchronous JavaScript=
+
     find_link('foo').click
     page.should have_content('baz')
     page.should_not have_xpath('//a')
