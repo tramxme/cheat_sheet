@@ -2,7 +2,7 @@ dd: delete sentence
 
 J: join 2 lines together
 
-o:  creates a new, empty line BELOW the cursor and puts Vim in Insert mode. 
+o:  creates a new, empty line BELOW the cursor and puts Vim in Insert mode.
 
 O: open a line ABOVE the cursor
 
@@ -42,9 +42,9 @@ ctr-f: scroll forward # ctr-b: scroll backwards
 
 ``: go back to the old position before the jump
 
-ctr+ o: go to older position # ctr-i go to newer position 
+ctr+ o: go to older position # ctr-i go to newer position
 
-ma: create a mark, `a: go to that mark 
+ma: create a mark, `a: go to that mark
 
 dd: delete the whole line
 
@@ -79,11 +79,51 @@ n
 
 y: copy
 
-p: paste a line after the current line cursor on 
+p: paste a line after the current line cursor on
 
 P: paste a line before the current line cursor on
 
 :%s/pattern//gn :count number of matches of a pattern
 
 :3s/pattern//gn: check to see if that pattern is on line 3
+
+shift + i : open hidden files
+
+
+NERDTREE - vim: 
+
+u: move up a dir from the selected dir/file # C: move to the selected dir
+
+U: move up a dir but leave the selected one open
+
+m: open menu
+
+For files:
+
+o (go): open ## go
+
+s (gs): open file vertically split # i (gi): open file horizontally split
+
+t: open file in new tab (T open new tab silently)
+
+For directories:
+
+o: open & close ## O: recursively open
+
+x: close parent ## X: close all children recursively
+
+e: explore selected dir
+
+p: go to parent
+
+P: go to root
+
+K: go to first child # J: go to last child
+
+Ctrl-k: go to prev sibling # Ctrl-j: go to next sibling
+
+I: hidden files
+
+F: only list files
+
 
